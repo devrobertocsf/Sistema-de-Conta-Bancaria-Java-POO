@@ -34,8 +34,3 @@ De acordo com o planejamento do projeto, as seguintes regras foram estabelecidas
 *Este projeto faz parte do meu aprendizado contínuo em Java e desenvolvimento de software.*
 
 ---
-
-### Dicas para o seu Repositório:
-*   **Imagens no README:** Você pode subir aquelas imagens do Carbon que você criou para uma pasta chamada `/img` no seu repositório e exibi-las no README usando o código `![Legenda](caminho/da/imagem.png)`.
-*   **Link no LinkedIn:** Quando postar no LinkedIn, coloque o link deste repositório. Isso mostra que você sabe usar o Git para versionar seu progresso.
-```
