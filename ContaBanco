@@ -1,0 +1,129 @@
+package aula05;
+
+public class ContaBanco {
+
+public int NumConta;
+protected String Tipo;
+private String Dono;
+private float Saldo;
+private boolean Status;
+
+public ContaBanco() {
+	this.Status = false;
+	this.Saldo = 0;
+}
+
+public void mostrar() {
+	System.out.println("Status da conta: " + this.Status);
+	System.out.println("Tipo da conta: " + this.Tipo);
+	System.out.println("Saldo: " + this.Saldo);
+	System.out.println("Número da conta:" + this.getNumConta());
+	System.out.println("Dono: " + this.getDono());
+	
+}
+
+public void abrirconta(String t) {
+	this.setTipo(t);
+	this.setStatus(true);
+	if (t == "CC") {
+		this.setSaldo(50);
+	} else if (t == "CP") {
+		this.setSaldo(150);
+	}
+	System.out.println("Sua conta foi aberta.");
+}
+
+public void fecharconta() {
+	if (this.getSaldo() > 0) {
+		System.out.println("NÃO PODE SER FECHADA! Conta com dinheiro!");
+	} else if (this.getSaldo() < 0) {
+		System.out.println("NÃO PODE SER FECHADA! Conta em débito!");
+	} else {
+		
+		this.setStatus(false);
+		System.out.println("Sua conta foi fechada.");
+	}
+}
+
+public void depositar(float v) {
+	if (this.getStatus() == true) {
+		this.setSaldo(getSaldo() + v);
+		System.out.println("Depósito realizado na conta de " + this.getDono());
+
+	} else {
+		System.out.println("Abra a sua conta para depositar!");
+	}
+}
+
+public void sacar(float v) {
+    // 1. Verifica se a conta está aberta/ativa
+    if (this.getStatus()) { 
+        // 2. Verifica se há saldo suficiente
+        if (this.getSaldo() >= v) {
+            this.setSaldo(this.getSaldo() - v);
+            System.out.println("Saque de R$" + v + " realizado na conta de " + this.getDono());
+        } else {
+            System.out.println("Saldo insuficiente para o saque.");
+        }
+    } else {
+        System.out.println("Impossível sacar de uma conta fechada!");
+    }
+}
+
+public void pagarMensal() {
+	int v = 0;
+	if (this.getTipo() == "CC") {
+		v = 12;
+	} else if (this.getTipo() == "CP") {
+		v = 20;
+	}
+	if (this.getStatus()) {
+		this.setSaldo(this.getSaldo() - v);
+		System.out.println("Mensalidade paga");
+	} else {
+		System.out.println("Impossível pagar com uma conta fechada!");
+	}
+}
+
+
+public int getNumConta() {
+	return NumConta;
+}
+
+public void setNumConta(int numConta) {
+	this.NumConta = numConta;
+}
+
+public String getTipo() {
+	return Tipo;
+}
+
+public void setTipo(String tipo) {
+	this.Tipo = tipo;
+}
+
+public String getDono() {
+	return Dono;
+}
+
+public void setDono(String dono) {
+	Dono = dono;
+}
+
+public float getSaldo() {
+	return Saldo;
+}
+
+public void setSaldo(float saldo) {
+	this.Saldo = saldo;
+}
+
+public boolean getStatus() {
+	return Status;
+}
+
+public void setStatus(boolean status) {
+	this.Status = status;
+}
+	
+}
