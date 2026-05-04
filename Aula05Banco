@@ -1,0 +1,19 @@
+package aula05;
+
+public class Aula05Banco {
+
+	public static void main(String[] args) {
+	ContaBanco n1 = new ContaBanco();
+	n1.abrirconta("CC");
+	// n1.setSaldo(1000);
+	n1.setDono("LUCAS");
+	n1.setNumConta(1);
+	n1.depositar(150);
+	n1.fecharconta();
+	n1.mostrar();
+	
+	
+
+	}
+
+}
