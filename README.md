@@ -32,5 +32,10 @@ De acordo com o planejamento do projeto, as seguintes regras foram estabelecidas
 
 ---
 *Este projeto faz parte do meu aprendizado contínuo em Java e desenvolvimento de software.*
+---
+![Interface do Banco](banco1.png)
+![Interface do Banco](banco2.png)
+![Interface do Banco](banco3.png)
+![Interface do Banco](banco4.png)
 
 ---
